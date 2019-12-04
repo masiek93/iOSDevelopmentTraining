@@ -10,6 +10,16 @@ import UIKit
 
 class NewViewController: UIViewController {
     
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        navigationItem.title = "2nd View"
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
+    
     override func loadView() {
         super.loadView()
     }
@@ -28,12 +38,5 @@ class NewViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        navigationItem.title = "2nd View"
-        
-    }
-    
 }
 

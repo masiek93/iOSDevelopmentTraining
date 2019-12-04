@@ -8,19 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MyCustomViewController: UIViewController {
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        navigationItem.title = "1st View"
+    }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        navigationItem.title = "1st View"
+        return nil
         
     }
     
+    lazy var aView = MyCustomView()
+    
     override func loadView() {
-        super.loadView()
+        view = aView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        aView.sendButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -35,17 +43,9 @@ class ViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
-    @IBAction
-    func buttonTapped() {
-        performSegue(withIdentifier: "push", sender: self)
-        print(NSLocalizedString("hello_world", comment: ""))
+    @objc
+    func buttonPressed(_ button: UIButton){
+        print("Pressed")
     }
-
-    @IBOutlet
-    var button: UIButton!
-    
-    @IBOutlet
-    var label: UILabel!
-
 }
 
