@@ -8,13 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        navigationItem.title = "1st View"
-        
-    }
+class NewViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
@@ -35,17 +29,11 @@ class ViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
-    @IBAction
-    func buttonTapped() {
-        performSegue(withIdentifier: "push", sender: self)
-        print(NSLocalizedString("hello_world", comment: ""))
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        navigationItem.title = "2nd View"
+        
     }
-
-    @IBOutlet
-    var button: UIButton!
     
-    @IBOutlet
-    var label: UILabel!
-
 }
 
