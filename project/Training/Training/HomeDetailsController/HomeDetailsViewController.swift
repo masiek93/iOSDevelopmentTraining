@@ -12,21 +12,19 @@ class HomeDetailsViewController: UIViewController {
     }
 
     
-    lazy var homeView = HomeDetailsView()
+    lazy var detailsView = HomeDetailsView()
     
     override func loadView() {
-        view = homeView
+        view = detailsView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        homeView.sendButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        let buttonController = ButtonController { NewViewController() }
+        
+        embed(buttonController, inside: detailsView.sendButtonContainer)
     }
     
-    @objc
-    func buttonPressed(_ button: UIButton){
-        navigationController?.pushViewController(NewViewController(), animated: true)
-    }
     
     
     

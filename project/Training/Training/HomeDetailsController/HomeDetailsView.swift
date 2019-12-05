@@ -1,16 +1,6 @@
 import UIKit
 
 class HomeDetailsView: UIView {
-    
-
-    let sendButton: UIButton = {
-        let button = UIButton(frame: .zero)
-        button.setTitle("Send", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .white
-        return button
-    }()
-    
     init() {
         super.init(frame: .zero)
         
@@ -19,17 +9,19 @@ class HomeDetailsView: UIView {
         
     }
     
+    let sendButtonContainer = UIView(frame: .zero)
+    
     private func addSubviews(){
-        addSubview(sendButton)
+        addSubview(sendButtonContainer)
     }
     
     private func setUpLayout(){
         backgroundColor = .yellow
         
         
-        sendButton.sizeAnchors == CGSize(width: 100, height: 30)
-        sendButton.bottomAnchor == safeAreaLayoutGuide.bottomAnchor
-        sendButton.centerXAnchor == centerXAnchor
+        sendButtonContainer.sizeAnchors == CGSize(width: 100, height: 30)
+        sendButtonContainer.bottomAnchor == safeAreaLayoutGuide.bottomAnchor
+        sendButtonContainer.centerXAnchor == centerXAnchor
     }
     
     required init?(coder aDecoder: NSCoder) {
