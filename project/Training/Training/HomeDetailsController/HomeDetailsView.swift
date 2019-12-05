@@ -1,3 +1,4 @@
+import Anchorage
 import UIKit
 
 class HomeDetailsView: UIView {

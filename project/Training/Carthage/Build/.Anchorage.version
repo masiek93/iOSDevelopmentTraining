@@ -1,0 +1,10 @@
+{
+  "commitish" : "4.3.1",
+  "iOS" : [
+    {
+      "name" : "Anchorage",
+      "hash" : "8241c51392bfcd218e1c392eb0264f8b1e0c09fa4d627085c16a9b039b6ab25e",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ]
+}
