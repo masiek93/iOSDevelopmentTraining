@@ -37,6 +37,23 @@ class PeopleController: UITableViewController {
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         60
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let name = people[indexPath.row].name
+        
+        let alertController = UIAlertController(title: "Person selected", message: "You have selected \(name)", preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: .default,
+                                                handler: { _ in print("OK tapped")}))
+        
+        
+        let controller = HomeViewController()
+        
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .partialCurl
+        
+        present(controller, animated: true, completion: nil)
+    }
 }
 
 enum PeopleControllerCell: String {
