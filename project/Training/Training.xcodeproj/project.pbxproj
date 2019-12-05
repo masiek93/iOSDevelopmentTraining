@@ -17,6 +17,9 @@
 		849F86212397D2560083E527 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F86202397D2560083E527 /* NewViewController.swift */; };
 		849F86242397F0360083E527 /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F86232397F0360083E527 /* MyCustomView.swift */; };
 		849F86262397F6230083E527 /* Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F86252397F6230083E527 /* Anchorage.swift */; };
+		849F86282398F4BF0083E527 /* HomeVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F86272398F4BF0083E527 /* HomeVIewController.swift */; };
+		849F862A2398F5230083E527 /* HomeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F86292398F5230083E527 /* HomeDetailsViewController.swift */; };
+		849F862C2398F7BB0083E527 /* HomeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F862B2398F7BB0083E527 /* HomeDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		849F86202397D2560083E527 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		849F86232397F0360083E527 /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
 		849F86252397F6230083E527 /* Anchorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchorage.swift; sourceTree = "<group>"; };
+		849F86272398F4BF0083E527 /* HomeVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVIewController.swift; sourceTree = "<group>"; };
+		849F86292398F5230083E527 /* HomeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailsViewController.swift; sourceTree = "<group>"; };
+		849F862B2398F7BB0083E527 /* HomeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 		849F85E92397A61F0083E527 /* Training */ = {
 			isa = PBXGroup;
 			children = (
+				849F862D2398F7CF0083E527 /* HomeDetailsController */,
 				849F86222397F00B0083E527 /* ViewController */,
 				849F85EA2397A61F0083E527 /* AppDelegate.swift */,
 				849F85F12397A6210083E527 /* Assets.xcassets */,
@@ -113,6 +120,7 @@
 				849F85F62397A6210083E527 /* Info.plist */,
 				849F86202397D2560083E527 /* NewViewController.swift */,
 				849F86252397F6230083E527 /* Anchorage.swift */,
+				849F86272398F4BF0083E527 /* HomeVIewController.swift */,
 			);
 			path = Training;
 			sourceTree = "<group>";
@@ -142,6 +150,15 @@
 				849F86232397F0360083E527 /* MyCustomView.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		849F862D2398F7CF0083E527 /* HomeDetailsController */ = {
+			isa = PBXGroup;
+			children = (
+				849F86292398F5230083E527 /* HomeDetailsViewController.swift */,
+				849F862B2398F7BB0083E527 /* HomeDetailsView.swift */,
+			);
+			path = HomeDetailsController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,10 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				849F86262397F6230083E527 /* Anchorage.swift in Sources */,
+				849F86282398F4BF0083E527 /* HomeVIewController.swift in Sources */,
+				849F862C2398F7BB0083E527 /* HomeDetailsView.swift in Sources */,
 				849F86242397F0360083E527 /* MyCustomView.swift in Sources */,
 				849F86212397D2560083E527 /* NewViewController.swift in Sources */,
 				849F85ED2397A61F0083E527 /* MyCustomViewController.swift in Sources */,
 				849F85EB2397A61F0083E527 /* AppDelegate.swift in Sources */,
+				849F862A2398F5230083E527 /* HomeDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

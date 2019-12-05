@@ -29,8 +29,6 @@ class MyCustomView: UIView {
         addSubviews()
         setUpLayout()
         
-        
-        
     }
     
     private func addSubviews(){
@@ -42,9 +40,9 @@ class MyCustomView: UIView {
     private func setUpLayout(){
         backgroundColor = .yellow
         
-        
         textField.horizontalAnchors == horizontalAnchors + 20
-        textField.centerAnchors == centerAnchors
+        textField.topAnchor == safeAreaLayoutGuide.topAnchor
+        textField.centerXAnchor == centerXAnchor
         textField.heightAnchor == 60
         
         
@@ -53,8 +51,8 @@ class MyCustomView: UIView {
         passwordTextField.topAnchor == textField.bottomAnchor + 30
         
         sendButton.sizeAnchors == CGSize(width: 100, height: 30)
-        sendButton.topAnchor == passwordTextField.bottomAnchor + 20
-        sendButton.centerXAnchor == passwordTextField.centerXAnchor
+        sendButton.bottomAnchor == safeAreaLayoutGuide.bottomAnchor ~ .high     // shorter version
+        sendButton.centerXAnchor == passwordTextField.centerXAnchor ~ Priority.low
     }
     
     required init?(coder aDecoder: NSCoder) {

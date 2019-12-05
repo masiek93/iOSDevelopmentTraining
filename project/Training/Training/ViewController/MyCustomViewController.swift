@@ -45,7 +45,7 @@ class MyCustomViewController: UIViewController {
     
     @objc
     func buttonPressed(_ button: UIButton){
-        print("Pressed")
+        navigationController?.pushViewController(HomeViewController(), animated: true)
     }
 }
 
