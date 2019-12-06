@@ -38,6 +38,7 @@
 		84FD5AA4239A6DC00072FC30 /* PersonSelectedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5AA3239A6DC00072FC30 /* PersonSelectedRepository.swift */; };
 		84FD5AA6239A80C80072FC30 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FD5AA5239A80C80072FC30 /* KeychainAccess.framework */; };
 		84FD5AA7239A82A30072FC30 /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84FD5AA5239A80C80072FC30 /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84FD5AA9239A8DE90072FC30 /* PostSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5AA8239A8DE90072FC30 /* PostSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		84FD5AA1239957B90072FC30 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		84FD5AA3239A6DC00072FC30 /* PersonSelectedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSelectedRepository.swift; sourceTree = "<group>"; };
 		84FD5AA5239A80C80072FC30 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		84FD5AA8239A8DE90072FC30 /* PostSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				849F86012397A6210083E527 /* Info.plist */,
 				84FD5A98239945C00072FC30 /* QuickViewControllerSpec.swift */,
 				84FD5AA1239957B90072FC30 /* HomeViewControllerTests.swift */,
+				84FD5AA8239A8DE90072FC30 /* PostSpec.swift */,
 			);
 			path = TrainingTests;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 			files = (
 				849F86002397A6210083E527 /* TrainingTests.swift in Sources */,
 				84FD5AA2239957B90072FC30 /* HomeViewControllerTests.swift in Sources */,
+				84FD5AA9239A8DE90072FC30 /* PostSpec.swift in Sources */,
 				84FD5A99239945C00072FC30 /* QuickViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

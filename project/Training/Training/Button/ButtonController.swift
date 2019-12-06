@@ -11,7 +11,7 @@ class ButtonController: UIViewController {
         return nil
     }
     
-    var controllerFactory: (() -> UIViewController)?
+    var controllerFactory: () -> UIViewController
     
     
     lazy var button: UIButton = {
@@ -34,11 +34,55 @@ class ButtonController: UIViewController {
     
     @objc
     func buttonPressed(_ button: UIButton){
-        guard let controller = controllerFactory?() else {
-            return
+        performRequest { [weak self] posts in
+            print("Received posts: \(posts)")
+            guard let `self` = self else { return }
+            self.navigationController?.pushViewController(self.controllerFactory(), animated: true)
+            
         }
         
-        navigationController?.pushViewController(controller, animated: true)
+//        guard let controller = controllerFactory?() else {
+//            return
+//        }
+//
+//        navigationController?.pushViewController(controller, animated: true)
     }
     
+    private func performRequest(_ completionHandler: @escaping ([Post]) -> Void) {
+        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+        let task = URLSession.shared.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                return
+            }
+            
+            guard let data = data, let posts = try? JSONDecoder().decode([Post].self, from: data) else {
+                return
+            }
+            
+            
+            DispatchQueue.main.async {
+                completionHandler(posts)
+            }
+            
+        }
+        
+        
+        task.resume()
+    }
+    
+}
+
+
+struct Post: Decodable {
+    let id: Int
+    let userID: Int
+    let title: String
+    let body: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case userID = "userId"
+        case title
+        case body
+    }
 }
