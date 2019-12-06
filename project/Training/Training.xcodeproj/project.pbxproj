@@ -32,6 +32,9 @@
 		84FD5A97239945160072FC30 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84FD5A92239944C10072FC30 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84FD5A99239945C00072FC30 /* QuickViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5A98239945C00072FC30 /* QuickViewControllerSpec.swift */; };
 		84FD5A9C239946E50072FC30 /* QuickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5A9B239946E50072FC30 /* QuickViewController.swift */; };
+		84FD5A9F239956FA0072FC30 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FD5A9E239956FA0072FC30 /* SnapshotTesting.framework */; };
+		84FD5AA0239957000072FC30 /* SnapshotTesting.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84FD5A9E239956FA0072FC30 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84FD5AA2239957B90072FC30 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5AA1239957B90072FC30 /* HomeViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				84FD5AA0239957000072FC30 /* SnapshotTesting.framework in CopyFiles */,
 				84FD5A96239945160072FC30 /* Nimble.framework in CopyFiles */,
 				84FD5A97239945160072FC30 /* Quick.framework in CopyFiles */,
 			);
@@ -108,6 +112,8 @@
 		84FD5A92239944C10072FC30 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		84FD5A98239945C00072FC30 /* QuickViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickViewControllerSpec.swift; sourceTree = "<group>"; };
 		84FD5A9B239946E50072FC30 /* QuickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickViewController.swift; sourceTree = "<group>"; };
+		84FD5A9E239956FA0072FC30 /* SnapshotTesting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapshotTesting.framework; path = Carthage/Build/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
+		84FD5AA1239957B90072FC30 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FD5A9F239956FA0072FC30 /* SnapshotTesting.framework in Frameworks */,
 				84FD5A93239944C10072FC30 /* Nimble.framework in Frameworks */,
 				84FD5A94239944C10072FC30 /* Quick.framework in Frameworks */,
 			);
@@ -186,6 +193,7 @@
 				849F85FF2397A6210083E527 /* TrainingTests.swift */,
 				849F86012397A6210083E527 /* Info.plist */,
 				84FD5A98239945C00072FC30 /* QuickViewControllerSpec.swift */,
+				84FD5AA1239957B90072FC30 /* HomeViewControllerTests.swift */,
 			);
 			path = TrainingTests;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 		84FD5A8E239944A30072FC30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84FD5A9E239956FA0072FC30 /* SnapshotTesting.framework */,
 				84FD5A91239944C10072FC30 /* Nimble.framework */,
 				84FD5A92239944C10072FC30 /* Quick.framework */,
 				84FD5A8F239944A30072FC30 /* Carthage */,
@@ -416,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849F86002397A6210083E527 /* TrainingTests.swift in Sources */,
+				84FD5AA2239957B90072FC30 /* HomeViewControllerTests.swift in Sources */,
 				84FD5A99239945C00072FC30 /* QuickViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2SBG398U5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -609,6 +620,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2SBG398U5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

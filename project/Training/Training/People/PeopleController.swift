@@ -12,7 +12,7 @@ class PeopleController: UITableViewController {
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
-    let people = Person.testData
+    var people = Person.testData
     
     override func numberOfSections(in tableView: UITableView) -> Int { 1 }
     
@@ -30,30 +30,30 @@ class PeopleController: UITableViewController {
             tableView.dequeueReusableCell(withIdentifier: PeopleControllerCell.person.rawValue, for: indexPath) as! PersonCell
         
         cell.nameLabel.text = people[indexPath.row].name
+        cell.selectedSwitch.isOn = people[indexPath.row].selected
+        cell.selectedSwitch.addTarget(self, action: #selector(switchSelectionChanged(_:)), for: .valueChanged)
+        cell.selectedSwitch.tag = people[indexPath.row].id
+        // cell.selectedSwitch.accessibilityIdentifier // string tag
+        
         
         return cell
+    }
+    
+    @objc
+    private func switchSelectionChanged(_ selectedSwitch: UISwitch) {
+        let index = people.firstIndex { $0.id == selectedSwitch.tag }
+        
+        if let index = index {
+            people[index].selected = selectedSwitch.isOn
+        }
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         60
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let name = people[indexPath.row].name
-        
-        let alertController = UIAlertController(title: "Person selected", message: "You have selected \(name)", preferredStyle: .alert)
-        
-        alertController.addAction(UIAlertAction(title: "OK", style: .default,
-                                                handler: { _ in print("OK tapped")}))
-        
-        
-        let controller = HomeViewController()
-        
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .partialCurl
-        
-        present(controller, animated: true, completion: nil)
-    }
+    
+    
 }
 
 enum PeopleControllerCell: String {
