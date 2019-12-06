@@ -1,6 +1,9 @@
 import UIKit
 
 class PeopleController: UITableViewController {
+    var people = Person.testData
+    private let repository = PersonSelectedRepository()
+    
     init(title: String){
         super.init(nibName: nil, bundle: nil)
         tabBarItem.title = title
@@ -12,7 +15,6 @@ class PeopleController: UITableViewController {
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
-    var people = Person.testData
     
     override func numberOfSections(in tableView: UITableView) -> Int { 1 }
     
@@ -30,9 +32,9 @@ class PeopleController: UITableViewController {
             tableView.dequeueReusableCell(withIdentifier: PeopleControllerCell.person.rawValue, for: indexPath) as! PersonCell
         
         cell.nameLabel.text = people[indexPath.row].name
-        cell.selectedSwitch.isOn = people[indexPath.row].selected
         cell.selectedSwitch.addTarget(self, action: #selector(switchSelectionChanged(_:)), for: .valueChanged)
         cell.selectedSwitch.tag = people[indexPath.row].id
+        cell.selectedSwitch.isOn = repository.isPersonSelected(cell.selectedSwitch.tag)
         // cell.selectedSwitch.accessibilityIdentifier // string tag
         
         
@@ -41,10 +43,11 @@ class PeopleController: UITableViewController {
     
     @objc
     private func switchSelectionChanged(_ selectedSwitch: UISwitch) {
-        let index = people.firstIndex { $0.id == selectedSwitch.tag }
         
-        if let index = index {
-            people[index].selected = selectedSwitch.isOn
+        if selectedSwitch.isOn {
+            repository.selectPerson(selectedSwitch.tag)
+        } else {
+            repository.deselectPerson(selectedSwitch.tag)
         }
     }
     

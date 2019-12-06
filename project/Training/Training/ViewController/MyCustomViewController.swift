@@ -1,11 +1,4 @@
-//
-//  ViewController.swift
-//  Training
-//
-//  Created by admin on 04/12/2019.
-//  Copyright © 2019 admin. All rights reserved.
-//
-
+import KeychainAccess
 import UIKit
 
 class MyCustomViewController: UIViewController {
@@ -22,6 +15,8 @@ class MyCustomViewController: UIViewController {
     
     lazy var aView = MyCustomView()
     
+    private static let passwordKey = "UserPassword"
+    
     override func loadView() {
         view = aView
     }
@@ -29,6 +24,8 @@ class MyCustomViewController: UIViewController {
         super.viewDidLoad()
         
         aView.sendButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        aView.passwordTextField.text = keychain[MyCustomViewController.passwordKey]
+        aView.passwordTextField.addTarget(self, action: #selector(passwordChanged(_:)), for: .editingChanged)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,6 +43,19 @@ class MyCustomViewController: UIViewController {
     @objc
     func buttonPressed(_ button: UIButton){
         navigationController?.pushViewController(HomeViewController(), animated: true)
+    }
+    
+    @objc
+    func passwordChanged(_ textField: UITextField){
+        keychain[MyCustomViewController.passwordKey] = textField.text
+    }
+    
+    private var keychain: Keychain {
+        guard let bundleID = Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String else {
+            fatalError("You shouln't use this controller withoun an app!")
+        }
+        return Keychain(service: "\(bundleID).password")
+            .accessibility(.whenUnlockedThisDeviceOnly)
     }
 }
 

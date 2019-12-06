@@ -35,6 +35,9 @@
 		84FD5A9F239956FA0072FC30 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FD5A9E239956FA0072FC30 /* SnapshotTesting.framework */; };
 		84FD5AA0239957000072FC30 /* SnapshotTesting.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84FD5A9E239956FA0072FC30 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84FD5AA2239957B90072FC30 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5AA1239957B90072FC30 /* HomeViewControllerTests.swift */; };
+		84FD5AA4239A6DC00072FC30 /* PersonSelectedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5AA3239A6DC00072FC30 /* PersonSelectedRepository.swift */; };
+		84FD5AA6239A80C80072FC30 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FD5AA5239A80C80072FC30 /* KeychainAccess.framework */; };
+		84FD5AA7239A82A30072FC30 /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84FD5AA5239A80C80072FC30 /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				84FD5AA7239A82A30072FC30 /* KeychainAccess.framework in Embed Frameworks */,
 				84FD5A8C2399402A0072FC30 /* Anchorage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -114,6 +118,8 @@
 		84FD5A9B239946E50072FC30 /* QuickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickViewController.swift; sourceTree = "<group>"; };
 		84FD5A9E239956FA0072FC30 /* SnapshotTesting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapshotTesting.framework; path = Carthage/Build/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
 		84FD5AA1239957B90072FC30 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		84FD5AA3239A6DC00072FC30 /* PersonSelectedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSelectedRepository.swift; sourceTree = "<group>"; };
+		84FD5AA5239A80C80072FC30 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FD5AA6239A80C80072FC30 /* KeychainAccess.framework in Frameworks */,
 				84FD5A8B2399402A0072FC30 /* Anchorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				849F861E2397AD800083E527 /* Localizable.strings */,
+				84FD5AA5239A80C80072FC30 /* KeychainAccess.framework */,
 				84FD5A892399400C0072FC30 /* Anchorage.framework */,
 				849F85E92397A61F0083E527 /* Training */,
 				849F85FE2397A6210083E527 /* TrainingTests */,
@@ -247,6 +255,7 @@
 				84FD5A8323990F810072FC30 /* Person.swift */,
 				84FD5A852399108C0072FC30 /* PeopleController.swift */,
 				84FD5A87239917710072FC30 /* PersonCell.swift */,
+				84FD5AA3239A6DC00072FC30 /* PersonSelectedRepository.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -407,6 +416,7 @@
 				84FD5A88239917710072FC30 /* PersonCell.swift in Sources */,
 				849F86282398F4BF0083E527 /* HomeVIewController.swift in Sources */,
 				84FD5A862399108C0072FC30 /* PeopleController.swift in Sources */,
+				84FD5AA4239A6DC00072FC30 /* PersonSelectedRepository.swift in Sources */,
 				849F862C2398F7BB0083E527 /* HomeDetailsView.swift in Sources */,
 				849F86242397F0360083E527 /* MyCustomView.swift in Sources */,
 				84FD5A8423990F810072FC30 /* Person.swift in Sources */,

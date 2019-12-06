@@ -3,7 +3,7 @@
   "iOS" : [
     {
       "name" : "SnapshotTesting",
-      "hash" : "4cb97fef939627f46ebe2ce6329eccad3e74cc19b6b67b0f8bf4367c7093e789",
+      "hash" : "5e786470a147d4f6f005c34fb3d3316cd6c0c72cfca1bbc8f2b2bf947a4c9fb9",
       "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     }
   ]

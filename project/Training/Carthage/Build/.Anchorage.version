@@ -3,7 +3,7 @@
   "iOS" : [
     {
       "name" : "Anchorage",
-      "hash" : "f735287ab06206bd7f854fc498cae97f05325638ba11ad8af7329dbfb1ea8190",
+      "hash" : "68a8be0bd2f56b11c1243ccb8b100a2e95e5d518720ebb19169a6d5c3a29c910",
       "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     }
   ]
